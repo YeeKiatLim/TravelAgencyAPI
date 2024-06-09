@@ -4,7 +4,7 @@ using TravelAgencyAPI.Models;
 namespace TravelAgencyAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("/tour")]
     public class TourController : ControllerBase
     {
         private readonly ToursDbContext _context;
@@ -51,6 +51,9 @@ namespace TravelAgencyAPI.Controllers
             {
                 Name = tour.Name.Trim(),
                 Description = tour.Description.Trim(),
+                Country = tour.Country.Trim(),
+                Type = tour.Type.Trim(),
+                Price = tour.Price,
                 CreatedAt = now,
                 UpdatedAt = now
             };
@@ -68,6 +71,9 @@ namespace TravelAgencyAPI.Controllers
             }
             myTour.Name = tour.Name.Trim();
             myTour.Description = tour.Description.Trim();
+            myTour.Country = tour.Country.Trim();
+            myTour.Type = tour.Type.Trim();
+            myTour.Price = tour.Price;
             myTour.UpdatedAt = DateTime.Now;
             _context.SaveChanges();
             return Ok();

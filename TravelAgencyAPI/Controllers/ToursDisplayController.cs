@@ -6,7 +6,7 @@ using TravelAgencyAPI.Models;
 namespace TravelAgencyAPI.Controllers
 {
     [ApiController]
-    [Route("api / [controller]")]
+    [Route("/")]
     public class ToursDisplayController : ControllerBase
     {
         private readonly ToursDbContext _context;

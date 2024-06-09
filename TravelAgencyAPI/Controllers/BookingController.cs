@@ -5,7 +5,7 @@ using Google.Protobuf;
 namespace TravelAgencyAPI.Controllers
 {
     [ApiController]
-    [Route("api / [controller]")]
+    [Route("/booking")]
     public class BookingController : ControllerBase
     {
         // A Protobuf JSON parser configured to ignore unknown fields. This makes
